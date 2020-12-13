@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+ 
+    "name": "No Fear No Ads", 
+    "description": "removes ads from the Sparknotes No Fear translation",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+        "activeTab"
+     ],
+
+    "content_scripts": [
+        {
+          "matches": [
+            "https://www.sparknotes.com/nofear/*"
+          ],
+          "js": ["app.js"]
+        }
+      ]
+}
