@@ -2,10 +2,11 @@
     "manifest_version": 2,
     "version": "1.0",
  
-    "name": "No Fear No Ads", 
-    "description": "removes ads from the Sparknotes No Fear translation",
+    "name": "Sparknotes Adblock", 
+    "description": "removes ads from the Sparknotes site",
     "browser_action": {
-        "default_icon": "icon.png"
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
     },
     "permissions": [
         "activeTab"
@@ -14,7 +15,7 @@
     "content_scripts": [
         {
           "matches": [
-            "https://www.sparknotes.com/nofear/*"
+            "https://www.sparknotes.com/*"
           ],
           "js": ["app.js"]
         }
